@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <style>
+
+    body {
+      display: grid;
+      grid-template-areas:
+        "header header header"
+        "article article article"
+        "article article article"
+        "footer footer footer";
+      grid-template-rows: 60px 1fr 60px;
+      grid-template-columns: 20% 1fr 15%;
+      grid-gap: 10px;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Lato', sans-serif;
+    }
+
+    #pageHeader {
+      grid-area: header;
+      height: 650px;
+      background-color: #444;
+      background-image: url(https://pbs.twimg.com/media/DLH-00aWsAACMUq.jpg);
+      background-size: cover;
+
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: white;
+      padding-left: 345px;
+      height: 57px;
+      font-family: 'Lato', sans-serif;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      display: block;
+      color: #444;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 11px;
+    }
+
+    li a:hover {
+      color: #ed524d;
+    }
+
+    #PageHeader1 {
+      text-align: center;
+      color: white;
+      margin-top: 200px;
+      background-color: black;
+      width: 1250px;
+      padding-right: 50px;
+      margin-left: 30px;
+      opacity: 0.6;
+      filter: alpha(opacity=60);
+      height: 130px;
+    }
+
+    #input[type=submit] {
+    width: 100px;
+    background-color: #ed524d;
+    color: white;
+    padding: 14px 8px;
+    margin: 8px 0;
+    border: 2px solid #ed524d;
+    border-radius: 3px;
+    font-family: 'Lato', sans-serif;
+    margin-left: 150mm;
+    float: left;
+  }
+
+  input[type=submit] {
+  width: 110px;
+  background-color: #444;
+  color: white;
+  padding: 14px 6px;
+  margin: 8px 0;
+  border: 2px solid #444;
+  border-radius: 3px;
+  font-family: 'Lato', sans-serif;
+  margin-left: 30px;
+  float: left;
+}
+
+#img_logo {
+  float: left;
+}
+
+    #paragraph {
+      width: 980px;
+      margin-left: 105px;
+    }
+
+    #mainArticle {
+      grid-area: article;
+      height: 500px;
+      margin-top: 600px;
+      color: #444;
+      }
+
+      #article {
+        float: left;
+        width: 600px;
+        margin-left: 40mm;
+      }
+
+      #blue_box1 {
+        width: 220px;
+        height: 165px;
+        background-color:#444;
+        float: left;
+        margin-left: 5px;
+        margin-bottom: 22px;
+      }
+
+      #red_box2 {
+        width: 220px;
+        height: 165px;
+        background-color: #444;
+        margin-left: 245px;
+        margin-bottom: 22px;
+      }
+
+      #green_box3 {
+        width: 220px;
+        height: 165px;
+        background-color: #444;
+        float: left;
+        margin-top: -5px;
+        margin-left: 5px;
+      }
+
+      #yellow_box4 {
+        width: 220px;
+        height: 165px;
+        background-color: #444;
+        float: left;
+        margin-top: -5px;
+        margin-left: 20px;
+
+      }
+
+      #shapes {
+        float: right;
+        margin-right: 25mm;
+        margin-top: 15mm;
+      }
+
+    #pagearticle_logos {
+      grid-area: article;
+      height: 420px;
+      background-color: black;
+      margin-top: 1100px;
+      clear: both;
+    }
+
+    #web_design {
+      height: 270px;
+      width: 300px;
+      background-color: black;
+      float: left;
+      margin-left: 50mm;
+    }
+
+    #heading_1_web_design {
+      color: white;
+      margin-top: 5mm;
+      margin-left: -3mm;
+      font-size: 19px;
+    }
+
+    #print_template {
+      height: 270px;
+      width: 300px;
+      background-color: black;
+      float: left;
+      margin-left: 26mm;
+    }
+
+    #heading_2_print_template {
+      margin-left: -8mm;
+      color: white;
+      margin-top: 2mm;
+      font-size: 19px;
+    }
+
+    .paragraph2 {
+      margin-left: -8mm;
+      color: white;
+      width: 200px;
+    }
+
+    #photography {
+      height: 250px;
+      width: 300px;
+      background-color: black;
+      float: left;
+      margin-left: 25mm;
+      margin-top: 0mm;
+    }
+
+    #heading_3_photography {
+      margin-left: -2mm;
+      color: white;
+      margin-top: 3mm;
+      font-size: 19px;
+    }
+
+    .paragraph {
+      color: white;
+      width: 200px;
+      font-size: 14px;
+      margin-left: -12px;
+    }
+
+    #page_portfolio {
+      grid-area: article;
+      height: 420px;
+      background-color: white;
+      margin-top: 1500px;
+      clear: both;
+      color: #444;
+    }
+
+    #heading3 {
+      margin-left: 40mm;
+      border-bottom: 2px solid #ed524d;
+      width: 230px;
+      margin-top: 20px;
+    }
+
+    #heading4 {
+      margin-left: 0mm;
+      border-bottom: 2px solid #ed524d;
+      width: 150px;
+      margin-top: 20px;
+    }
+
+    #paragraph {
+      margin-left: 40mm;
+    }
+
+    #our_team {
+      margin-left: 40mm;
+      margin-top: 130mm;
+    }
+
+    #portfolio_item_1 {
+      width: 250px;
+      height: 200px;
+      margin-left: 40mm;
+      float: left;
+      background-color: #333;
+    }
+
+    #portfolio_item_2 {
+      width: 250px;
+      height: 200px;
+      margin-left: 10px;
+      float: left;
+      background-color: #333;
+    }
+
+    #portfolio_item_3 {
+      width: 480px;
+      height: 415px;
+      margin-left: 10px;
+      float: left;
+      background-color: #333;
+    }
+
+    #portfolio_item_4 {
+      width: 250px;
+      height: 200px;
+      margin-left: 40mm;
+      float: left;
+      margin-top: -53mm;
+      background-color: #333;
+    }
+
+    #portfolio_item_5 {
+      width: 250px;
+      height: 200px;
+      margin-left: 411px;
+      float: left;
+      margin-top: -53mm;
+      background-color: #333;
+    }
+
+    #shapes2 {
+      float: left;
+      margin-left: 40mm;
+      margin-top: 5mm;
+    }
+
+    #para_team {
+      width: 990px;
+    }
+
+    #blue_box {
+      width: 200px;
+      height: 280px;
+      background-color:#333;
+      float: left;
+      margin-left: 5px;
+      margin-bottom: 22px;
+    }
+
+    #red_box {
+      width: 200px;
+      height: 280px;
+      background-color: #333;
+      margin-left: 525px;
+      margin-bottom: 22px;
+    }
+
+    #green_box {
+      width: 200px;
+      height: 280px;
+      background-color: #333;
+      float: left;
+      margin-top: -5px;
+      margin-left: 5px;
+    }
+
+    #yellow_box {
+      width: 200px;
+      height: 280px;
+      background-color: #333;
+      float: left;
+      margin-top: -5px;
+      margin-left: 320px;
+
+    }
+
+    #emma {
+      margin-left: 60mm;
+      margin-top: -70mm;
+      width: 200px;
+    }
+
+    #andrea {
+      margin-left: 60mm;
+      margin-top: -70mm;
+      width: 200px;
+    }
+
+    #tegan {
+      margin-left: 60mm;
+      margin-top: -70mm;
+      width: 200px;
+    }
+
+    #tracy {
+      margin-left: 60mm;
+      margin-top: -70mm;
+      width: 250px;
+    }
+
+    #pagearticle3 {
+      grid-area: article;
+      height: 280px;
+      background-color: black;
+      margin-top: 700px;
+      clear: both;
+      padding-left: 200px;
+    }
+
+    .counter {
+      display: table-cell;
+      margin:1.5%;
+      font-size:50px;
+      background-color: black;
+      width:200px;
+      border-radius: 50%;
+      margin-left: 100mm;
+      height:200px;
+      vertical-align: middle;
+      color: white;
+
+    }
+
+    #images2 {
+      margin-top: -10px;
+      float: left;
+    }
+
+    #images3 {
+      margin-top: -10px;
+      float: left;
+      margin-left: 5px;
+    }
+
+    #images4 {
+      margin-top: -10px;
+      float: left;
+      margin-left: 5px;
+    }
+
+    #images5 {
+      margin-top: -10px;
+      float: left;
+      margin-left: 5px;
+    }
+
+    #images6 {
+      margin-top: -12px;
+      float: left;
+      margin-left: 5px;
+    }
+
+    #subscribe {
+      height: 200px;
+      background-color: white;
+      text-align: center;
+    }
+
+    #text1 {
+      width: 400px;
+      height: 45px;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      padding-left: 10px;
+    }
+
+    #reset {
+      width: 100px;
+      padding: 12px 20px;
+      margin: 8px 0;
+      border-radius: 4px;
+      background-color: #ed524d;
+      color: white;
+    }
+
+    .LOGO_icons {
+      margin-top: 70px;
+      height: 270px;
+      background-color: black;
+    }
+
+    .image_logo {
+      margin-left: 40mm;
+    }
+
+    .flex-container {
+      display: flex;
+      background-color: none;
+    }
+
+    .flex-container>div {
+      background-color: none;
+      width: 350px;
+      height: 190px;
+      margin: 10px;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    h2{
+      font-size: 15px;
+    }
+
+    .paratext {
+      color: black;
+    }
+
+    a {
+      color: black;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 11px;
+    }
+
+    a:hover {
+      color: #ed524d;
+    }
+
+    .icon {
+      float: left;
+      margin-left: 25mm;
+    }
+
+    #p2 {
+      width: 200px;
+      margin-left: 10mm;
+    }
+
+    #p3 {
+      margin-right: 26mm;
+    }
+
+    #p4 {
+      margin-right: 30mm;
+    }
+
+    .flex-box {
+      display: flex;
+      background-color: #ed524d;
+    }
+
+    .flex-box>div {
+      background-color: none;
+      width: 700px;
+      height: 40px;
+      text-align: center;
+      font-size: 13px;
+      color: white;
+      margin-top: 12px;
+    }
+
+    #die {
+      margin-left: -10mm;
+      margin-top: 12px;
+    }
+
+    .pictures {
+      margin-top: 13px;
+      margin-left: 15px;
+    }
+
+    #f {
+      margin-left: 165mm;
+      margin-top: 25px;
+    }
+    </style>
+  </head>
+  <body>
+
+    <header id="pageHeader">
+
+      <div id="img_logo">
+        <img src="images/cdt.png" alt="pic" width="160" height="57">
+      </div>
+
+      <ul>
+        <li><a class="active" href="#home">HOME</a></li>
+        <li><a href="#news">SERVICE</a></li>
+        <li><a href="#contact">ABOUT</a></li>
+        <li><a href="#about">CONTACT</a></li>
+      </ul>
+
+      <div id="PageHeader1">
+      <h1 id="heading">Code for Cape Town</h1>
+      <p id="paragraph">We want to see young women empowered to leverage technology for social innovation, so that there is greater diversity in the African tech industry.
+         We want high school girls to have an enabling environment to imagine and create new technology that is relevant to a South African context.</p>
+
+      </div>
+
+      <input id="input" type="submit" value="READ MORE"> <input type="submit" value="DONATE NOW">
+
+    </header>
+
+    <article id="mainArticle">
+
+      <div id="article">
+      <h3>Who We Are </h3>
+      <p>Code for Cape Town (Code4CT) is a programme that introduces young girls to basic web building skills and exposes them to opportunities in the Information and Communication Technologies (ICT) sector. Participants are trained in web development, design principles, as well as courses in professional development. Code4CT aims to inspire a generation of young girls who are well-prepared with a toolkit of technical and soft skills in order to achieve high impact in the workplace.</p>
+      <p>These are skills that everyone should have. Even if you have no intention of becoming a professional coder, you will benefit from knowing how to think in this way in this increasingly computerized economy. A growing number of permanent job positions that use information technology to deliver a product or a service are becoming available in the local economy.  It is estimated that nearly 75000 such jobs will come online in South Africa within the next five years.  These digital jobs will mostly be driven by the ICT, Business Process Outsourcing (BPO), and the financial services industries.  These are the fastest growing sectors in our economy.  They are also the sectors that have the highest demand for entry-level digital skills.</p>
+      <p>Read More</p>
+      </div>
+
+      <div id="shapes">
+        <div id="blue_box1"><img src="images/class.jpg" alt="pic" width="220" height="165"></div>
+        <div id="red_box2"><img src="images/b.jpg" alt="pic" width="220" height="165"></div>
+        <div id="green_box3"><img src="images/p.jpg" alt="pic" width="220" height="165"></div>
+        <div id="yellow_box4"><img src="images/pic.jpg" alt="pic" width="220" height="165"></div>
+      </div>
+    </article>
+
+    <div id="pagearticle_logos">
+      <div id="web_design">
+        <img src="images/web.png" alt="pic" width="80" height="50">
+        <h4 id="heading_1_web_design">WEB DESIGN</h4>
+        <p class="paragraph">Learn how to build your own websites using HTML, CSS, JavaScript & JQuery. Go on to explore exciting modules from game development to user experience design.</p>
+      </div>
+
+      <div id="print_template">
+        <img src="images/print2.png" alt="pic" width="70" height="50">
+        <h4 id="heading_2_print_template">PRINT TEMPLATE</h4>
+        <p class="paragraph2">Explore future options by meeting different companies doing exciting things with technology. We offer career testing and connect you to our network of study institutions and bursary programs.</p>
+      </div>
+
+      <div id="photography">
+        <img src="images/img2.png" alt="pic" width="80" height="50">
+        <h4 id="heading_3_photography">PHOTOGRAPHY</h4>
+        <p class="paragraph">Learn how to pitch ideas, represent yourself online, communicate professionally and work with online collaboration tools.</p>
+      </div>
+    </div>
+
+    <div id="page_portfolio">
+      <h3 id="heading3">Our Awesome Portfolio</h3>
+      <p id="paragraph">We equip high potential female learners with the coding, problem solving and life skills that will allow them to leverage technology to contribute meaningfully to South Africa’s innovation system. The program exposes young women to how technology can be used for social innovation and helps them navigate critical study decisions.</p>
+
+      <div id="portfolio_item_1"><img src="images/home.jpg" alt="pic" width="250"height="200"></div>
+      <div id="portfolio_item_2"><img src="images/help.jpg" alt="pic" width="250"height="200"></div>
+      <div id="portfolio_item_3"><img src="images/img.jpg" alt="pic" width="520"height="415"></div>
+      <div id="portfolio_item_4"><img src="images/lap.jpg" alt="pic" width="250"height="200"></div>
+      <div id="portfolio_item_5"><img src="images/stud.jpg" alt="pic" width="250"height="200"></div>
+
+
+      <div id="our_team">
+        <h3 id="heading4">Meet Our Team</h3>
+        <p id="para_team">Code4CT is broadening perspectives about career opportunities for many girls and is showing them that the ICT sector offers exciting career paths with the opportunity for social impact.</p>
+      </div>
+
+      <div id="shapes2">
+
+        <div id="blue_box">
+          <img src="images/Emma.jpg" alt="pic" width="200" height="280">
+
+          <div id="emma">
+            <h3>Emma Dicks</h3>
+            <h4>Founder and Director</h4>
+            <p>Emma is passionate about providing high quality education that enables young people to bring innovative ideas to life and play an active role in South Africa’s economy.</p>
+
+            <div id="images2"><img src="images/f.png" alt="pic" width="25" height="25"></div>
+            <div id="images3"><a href="https://twitter.com/emmajanedicks?lang=en" target="_blank"><img src="images/tw2.png" alt="pic" width="30" height="30"></a></div>
+            <div id="images4"><img src="images/pi.png" alt="pic" width="30" height="30"></div>
+            <div id="images5"><img src="images/download.png" alt="pic" width="30" height="30"></div>
+            <div id="images6"><img src="images/ln.png" alt="pic" width="30" height="30"></div>
+          </div>
+
+        </div>
+
+        <div id="red_box">
+          <img src="images/Andrea.jpg" alt="pic" width="200" height="280">
+
+          <div id="andrea">
+            <h3>Andrea Petersen</h3>
+            <h4>Operations Lead</h4>
+            <p>Andrea thrives on seeing key players in the Code4CT ecosystem discover how they can make the greatest impact.</p>
+
+            <div id="images2"><img src="images/f.png" alt="pic" width="25" height="25"></div>
+            <div id="images3"><a href="https://twitter.com/koeksnpraat" target="_blank"><img src="images/tw2.png" alt="pic" width="30" height="30"></a></div>
+            <div id="images4"><img src="images/pi.png" alt="pic" width="30" height="30"></div>
+            <div id="images5"><img src="images/download.png" alt="pic" width="30" height="30"></div>
+            <div id="images6"><img src="images/ln.png" alt="pic" width="30" height="30"></div>
+          </div>
+
+        </div>
+
+        <div id="green_box">
+          <img src="images/Tegan.jpg" alt="pic" width="200" height="280">
+
+          <div id="tegan">
+            <h3>Tegan Crous</h3>
+            <h4>Program Lead</h4>
+            <p>Tegan heads up the high school program.She is spurred on by a heart for people and seeing them pursue their potential in a safe, fun and nurturing environment.</p>
+
+            <div id="images2"><img src="images/f.png" alt="pic" width="25" height="25"></div>
+            <div id="images3"><img src="images/tw2.png" alt="pic" width="30" height="30"></div>
+            <div id="images4"><img src="images/pi.png" alt="pic" width="30" height="30"></div>
+            <div id="images5"><img src="images/download.png" alt="pic" width="30" height="30"></div>
+            <div id="images6"><img src="images/ln.png" alt="pic" width="30" height="30"></div>
+          </div>
+
+        </div>
+
+        <div id="yellow_box">
+          <img src="images/Tracy.jpg" alt="pic" width="200" height="280">
+
+          <div id="tracy">
+            <h3>Tracy-Anne Sikenjana</h3>
+            <h4>Leadership Program Manager</h4>
+            <p>Tracy joined the Code4CT program in 2015 and then matriculated from Rustenburg Girls’ High in 2016. She decided to intern with Code4CT to give back to an organisation that had a large impact on her personal growth and development.</p>
+
+              <div id="images2"><img src="images/f.png" alt="pic" width="25" height="25"></div>
+              <div id="images3"><img src="images/tw2.png" alt="pic" width="30" height="30"></div>
+              <div id="images4"><img src="images/pi.png" alt="pic" width="30" height="30"></div>
+              <div id="images5"><img src="images/download.png" alt="pic" width="30" height="30"></div>
+              <div id="images6"><img src="images/ln.png" alt="pic" width="30" height="30"></div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div id="pagearticle3">
+
+      <div class="counter" data-count="1050">0</div>
+      <div class="counter" data-count="1850">0</div>
+      <div class="counter" data-count="2000">0</div>
+      <div class="counter" data-count="3300">0</div>
+      <div class="counter" data-count="2600">0</div>
+
+    </div>
+
+    <div id="subscribe">
+
+      <h3><div><img src="images/sub.png" alt="subscribe" width="80" height="70"></div>SUBSCRIBE TO US</h3>
+      <p id="para">Individuals and companies may choose to align themselves to our work by becoming a #FriendofCode4CT.</p>
+      <input id="text1" type="text" placeholder="enter your email"> <input id="reset"type="reset" value="Send email">
+
+    </div>
+
+    <div class="LOGO_icons">
+
+      <div class="image_logo">
+        <img src="images/mobi.png" alt="pic" width="170" height="120">
+        <img src="images/tl.png" alt="pic" width="170" height="120">
+        <img src="images/mazar.png" alt="pic" width="170" height="120">
+        <img src="images/TN.png" alt="pic" width="170" height="120">
+        <img src="images/lw.png" alt="pic" width="170" height="120">
+        <img src="images/csg.png" alt="pic" width="160" height="120">
+        <br></br>
+        <img src="images/open.png" alt="pic" width="170" height="120">
+        <img src="images/auto.png" alt="pic" width="170" height="120">
+        <img src="images/dg.png" alt="pic" width="190" height="120">
+        <img src="images/am.png" alt="pic" width="200" height="100">
+        <img src="images/d.png" alt="pic" width="170" height="120">
+        <img src="images/wetech.png" alt="pic" width="170" height="130">
+
+      </div>
+
+    </div>
+
+    <footer>
+
+      <div class="flex-container">
+        <div>
+          <h2>Legal</h2>
+          <p class="paratext">Code for Cape Town is a project of Innovate South Africa, which is a registered non-profit (137806NPO) and a Public Beneficiary Organisation (930050338)</p>
+        </div>
+        <div>
+          <h2>Help & Support</h2>
+          <p><a href="#">Help centre</a></p>
+          <p><a href="#">Free simple template</a></p>
+          <p><a href="#">Refund policy</a></p>
+          <p><a href="#">Report spam</a></p>
+        </div>
+
+        <div>
+          <h2 id="heads">Company</h2>
+          <p><a href="#">About Us</a></p>
+          <p><a href="#">Contact Us</a></p>
+          <p><a href="#">Blog</a></p>
+          <p><a href="#">Testamonials</a></p>
+          <p><a href="#">Affiliate programme</a></p>
+        </div>
+        <div>
+
+          <p class="paratext">We rely on the generous contributions of like-minded people like yourself to provide girls with an engaging learning experience and valuable opportunities.</p>
+          <p><img class="icon" src="images/phn.ico" alt="phn" width="15" height="15"><p id="p4">021 685 0991</p>
+          <p><img class="icon" src="images/letter.jpg" alt="phn" width="15" height="15"><p id="p3">info@code4ct.com</p>
+          <img class="icon" src="images/location.png" alt="phn" width="15" height="15"><p id="p2">403 Old Castle Brewery</p>
+
+        </div>
+      </div>
+
+      <div class="flex-box">
+
+        <div><p id="die">copyright © 2017 PRIVACY POLICY</p></div>
+        <div id="f">Follow us:</div>
+        <div id="pics">
+          <img class="pictures" src="images/fb.png" alt="pic" width="23" height="20">
+          <img class="pictures" src="images/tw.png" alt="pic" width="23" height="20">
+          <img class="pictures" src="images/pinterest.png" alt="pic" width="23" height="20">
+          <img class="pictures" src="images/g+.png" alt="pic" width="23" height="20">
+          <img class="pictures"src="images/Linkedin.png" alt="pic" width="23" height="20">
+          <img class="pictures" src="images/Skype-logo.png" alt="pic" width="23" height="20">
+        </div>
+
+      </div>
+
+    </footer>
+
+
+    <script>
+
+    $('.counter').each(function() {
+  var $this = $(this),
+      countTo = $this.attr('data-count');
+
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 8000,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+    }
+
+  });
+
+});
+    </script>
+  </body>
+</html>

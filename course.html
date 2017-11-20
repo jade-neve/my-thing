@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>Contact</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+    <style>
+
+    #img_logo {
+      float: left;
+    }
+
+    #pageHeader {
+      grid-area: header;
+      height: 150px;
+      background-color: #444;
+      background-color: white;
+      color: #444;
+    }
+
+    #PageHeader1 {
+      text-align: center;
+      margin-top: 0mm;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: white;
+      padding-left: 415px;
+      height: 57px;
+      font-family: 'Lato', sans-serif;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      display: block;
+      color: #444;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 11px;
+    }
+
+    li a:hover {
+      color: indianred;
+    }
+
+    body {
+      display: grid;
+      grid-template-areas:
+        "header header header"
+        "article article article"
+        "article article article"
+        "footer footer footer";
+      grid-template-rows: 60px 1fr 60px;
+      grid-template-columns: 20% 1fr 15%;
+      grid-gap: 10px;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Lato', sans-serif;
+    }
+
+    #mainArticle {
+      grid-area: article;
+      height: 300px;
+      margin-top: 0px;
+      color: #444;
+      }
+
+
+
+      #image {
+        float: left;
+        margin-top: 30mm;
+        margin-left: 50mm;
+      }
+
+      #toggle1 {
+        margin-top: 10mm;
+        width: 500px;
+        margin-left: 200mm;
+      }
+
+      .paragraph {
+        font-size: 13px;
+      }
+
+      @import "compass/css3";
+
+.item{
+  opacity:0;
+  @include transition(all, 500ms);
+  &.active{
+    opacity:1;
+  }
+}
+
+
+/* demo styles */
+
+
+
+      /*footer section*/
+
+    .flex-container {
+      display: flex;
+      background-color: none;
+      margin-top: 100mm;
+    }
+
+    .flex-container>div {
+      background-color: none;
+      width: 350px;
+      height: 190px;
+      margin: 10px;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    h2{
+      font-size: 25px;
+      border-bottom: 2px solid white;
+    }
+
+    span.heading {
+      border-bottom: 2px solid #ed524d;
+    }
+
+    .paratext {
+      color: black;
+    }
+
+    a {
+      color: black;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 11px;
+    }
+
+    a:hover {
+      color: #ed524d;
+    }
+
+    .icon {
+      float: left;
+      margin-left: 25mm;
+    }
+
+    #p2 {
+      width: 200px;
+      margin-left: 10mm;
+    }
+
+    #p3 {
+      margin-right: 26mm;
+    }
+
+    #p4 {
+      margin-right: 30mm;
+    }
+
+    .flex-box {
+      display: flex;
+      background-color: #ed524d;
+      margin-top: 0mm;
+    }
+
+    .flex-box>div {
+      background-color: none;
+      width: 700px;
+      height: 40px;
+      text-align: center;
+      font-size: 13px;
+      color: white;
+      margin-top: 12px;
+    }
+
+    #die {
+      margin-left: -10mm;
+      margin-top: 12px;
+    }
+
+    .pictures {
+      margin-top: 13px;
+      margin-left: 15px;
+    }
+
+    #f {
+      margin-left: 165mm;
+      margin-top: 25px;
+    }
+
+    #h4 {
+      font-size: 15px;
+    }
+
+    #heads {
+      font-size: 15px;
+    }
+
+    </style>
+
+  </head>
+  <body>
+
+
+      <header id="pageHeader">
+
+        <div id="img_logo">
+          <img src="images/cdt.png" alt="pic" width="160" height="57">
+        </div>
+
+        <ul>
+          <li><a class="active" href="#home">HOME</a></li>
+          <li><a href="#news">SERVICE</a></li>
+          <li><a href="#contact">ABOUT</a></li>
+          <li><a href="#about">CONTACT</a></li>
+        </ul>
+
+        <div id="PageHeader1">
+          <h1 id="heading">Recommended Streams</h1>
+        </div>
+
+      </header>
+
+      <article id="mainArticle">
+
+        <div id="sub_article">
+
+          <div id="image"><img src="images/coding.jpg" alt="code" width="300" height="250"></div>
+
+          <div id="toggle1">
+
+            <a href="#" class="toggle">Toggle</a>
+<p class="item">The Create with Code series is designed to give learners an introduction to the exciting world of coding, helping them to explore how creative coding can be. The package includes a testing day in which learners’ aptitude is assessed.
+Stream includes
+2 x Create with Code courses
+1 x Programming Aptitude Test
+(Test results sent to administrator)
+Prerequisites
+Computer literacy; English Proficiency
+Available courses
+Watch this space for an update or email info@code4ct.com for more information
+Pricing
+Individual                      R1800
+Group booking (6+)     R1500
+Financial aid is available for female learners who meet requirements and can prove financial need.</p>
+
+          </div>
+        </div>
+
+
+        <footer>
+
+          <div class="flex-container">
+            <div>
+              <h4 id="h4">Legal</h4>
+              <p class="paratext">Code for Cape Town is a project of Innovate South Africa, which is a registered non-profit (137806NPO) and a Public Beneficiary Organisation (930050338)</p>
+            </div>
+            <div>
+              <h4 id="h4">Help & Support</h4>
+              <p><a href="#">Help centre</a></p>
+              <p><a href="#">Free simple template</a></p>
+              <p><a href="#">Refund policy</a></p>
+              <p><a href="#">Report spam</a></p>
+            </div>
+
+            <div>
+              <h4 id="heads">Company</h4>
+              <p><a href="#">About Us</a></p>
+              <p><a href="#">Contact Us</a></p>
+              <p><a href="#">Blog</a></p>
+              <p><a href="#">Testamonials</a></p>
+              <p><a href="#">Affiliate programme</a></p>
+            </div>
+            <div>
+
+              <p class="paratext">We rely on the generous contributions of like-minded people like yourself to provide girls with an engaging learning experience and valuable opportunities.</p>
+              <p><img class="icon" src="images/phn.ico" alt="phn" width="15" height="15"><p id="p4">021 685 0991</p>
+              <p><img class="icon" src="images/letter.jpg" alt="phn" width="15" height="15"><p id="p3">info@code4ct.com</p>
+              <img class="icon" src="images/location.png" alt="phn" width="15" height="15"><p id="p2">403 Old Castle Brewery</p>
+
+            </div>
+          </div>
+
+          <div class="flex-box">
+
+            <div><p id="die">copyright © 2017 PRIVACY POLICY</p></div>
+            <div id="f">Follow us:</div>
+            <div id="pics">
+              <img class="pictures" src="images/fb.png" alt="pic" width="23" height="20">
+              <img class="pictures" src="images/tw.png" alt="pic" width="23" height="20">
+              <img class="pictures" src="images/pinterest.png" alt="pic" width="23" height="20">
+              <img class="pictures" src="images/g+.png" alt="pic" width="23" height="20">
+              <img class="pictures"src="images/Linkedin.png" alt="pic" width="23" height="20">
+              <img class="pictures" src="images/Skype-logo.png" alt="pic" width="23" height="20">
+            </div>
+
+          </div>
+
+        </footer>
+
+      </article>
+
+      <script>
+
+      $(function(){
+  $(".toggle").click(function(){
+    $(this).next().toggleClass("active");
+    return false;
+  });
+});
+      </script>
+
+  </body>
+</html>

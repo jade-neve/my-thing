@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>Contact</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+    <style>
+
+    #img_logo {
+      float: left;
+      margin-left: -550px;
+    }
+
+    #pageHeader {
+      grid-area: header;
+      height: 350px;
+      background-color: #444;
+      background-color: #e5e3e3;
+      color: #444;
+    }
+
+    #PageHeader1 {
+      text-align: center;
+      margin-top: 30mm;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: white;
+      padding-left: 555px;
+      height: 57px;
+      font-family: 'Lato', sans-serif;
+      position: fixed;
+      width: 100%;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      display: block;
+      color: #444;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 11px;
+    }
+
+    li a:hover {
+      color: indianred;
+    }
+
+    body {
+      display: grid;
+      grid-template-areas:
+        "header header header"
+        "article article article"
+        "article article article"
+        "footer footer footer";
+      grid-template-rows: 60px 1fr 60px;
+      grid-template-columns: 20% 1fr 15%;
+      grid-gap: 10px;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Lato', sans-serif;
+    }
+
+    #mainArticle {
+      grid-area: article;
+      height: 300px;
+      margin-top: 100mm;
+      color: #444;
+      }
+
+      span.heading3 {
+        border-bottom: 2px solid #ed524d;
+      }
+
+      h3 {
+        border-bottom: 2px solid white;
+        text-align: center;
+        color: #444;
+      }
+
+      #sub_article {
+        text-align: center;
+        width: 1300px;
+        margin-left: 5mm;
+      }
+
+      #pic1 {
+        float: left;
+        width: 310px;
+        height: 270px;
+        background-color: grey;
+      }
+
+      #pic2 {
+        float: left;
+        width: 310px;
+        height: 270px;
+        background-color: lightgrey;
+      }
+
+      #pic3 {
+        float: left;
+        width: 419px;
+        height: 270px;
+        background-color: #444;
+      }
+
+      #pic4 {
+        float: left;
+        width: 310px;
+        height: 270px;
+        background-color: darkgrey;
+      }
+
+      #pic5{
+        float: left;
+        width: 310px;
+        height: 270px;
+        background-color: #333;
+      }
+
+      #pic6 {
+        float: left;
+        width: 419px;
+        height: 270px;
+        background-color: grey;
+      }
+
+      #pic7 {
+        float: left;
+        width: 310px;
+        height: 270px;
+        background-color: lightgrey;
+      }
+
+      #pic8 {
+        float: left;
+        width: 310px;
+        height: 270px;
+        background-color: indianred;
+      }
+
+      #pic9 {
+        float: left;
+        width: 310px;
+        height: 270px;
+        background-color: #444;
+      }
+
+      #pic10 {
+        float: left;
+        width: 310px;
+        height: 270px;
+        background-color: lightgrey;
+      }
+
+      #pic11 {
+        float: left;
+        width: 419px;
+        height: 270px;
+        background-color: darkgrey;
+      }
+
+      #pic12 {
+        float: left;
+        width: 310px;
+        height: 270px;
+        background-color: grey;
+      }
+
+      #Portfolio {
+        background-color: black;
+        height: 810px;
+      }
+
+    .LOGO_icons {
+      margin-top: 70px;
+      height: 270px;
+      background-color: black;
+    }
+
+    .image_logo {
+      margin-left: 40mm;
+    }
+
+      /*footer section*/
+
+    .flex-container {
+      display: flex;
+      background-color: none;
+      margin-top: 0mm;
+    }
+
+    .flex-container>div {
+      background-color: none;
+      width: 350px;
+      height: 190px;
+      margin: 10px;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    h2{
+      font-size: 25px;
+      border-bottom: 2px solid white;
+    }
+
+
+
+    .paratext {
+      color: black;
+    }
+
+    a {
+      color: black;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 11px;
+    }
+
+    a:hover {
+      color: #ed524d;
+    }
+
+    .icon {
+      float: left;
+      margin-left: 25mm;
+    }
+
+    #p2 {
+      width: 200px;
+      margin-left: 10mm;
+    }
+
+    #p3 {
+      margin-right: 26mm;
+    }
+
+    #p4 {
+      margin-right: 30mm;
+    }
+
+    .flex-box {
+      display: flex;
+      background-color: #ed524d;
+      margin-top: 0mm;
+    }
+
+    .flex-box>div {
+      background-color: none;
+      width: 700px;
+      height: 40px;
+      text-align: center;
+      font-size: 13px;
+      color: white;
+      margin-top: 12px;
+    }
+
+    #die {
+      margin-left: -10mm;
+      margin-top: 12px;
+    }
+
+    .pictures {
+      margin-top: 13px;
+      margin-left: 15px;
+    }
+
+    #f {
+      margin-left: 165mm;
+      margin-top: 25px;
+    }
+
+    h4 {
+      font-size: 15px;
+    }
+
+    h5 {
+      font-size: 13px;
+    }
+
+    </style>
+
+  </head>
+  <body>
+
+
+      <header id="pageHeader">
+
+
+
+        <ul>
+          <div id="img_logo">
+            <img src="images/cdt.png" alt="pic" width="160" height="57">
+          </div>
+          <li><a class="active" href="#home">HOME</a></li>
+          <li><a href="#news">SERVICE</a></li>
+          <li><a href="#contact">ABOUT</a></li>
+          <li><a href="#about">CONTACT</a></li>
+        </ul>
+
+        <div id="PageHeader1">
+          <h1 id="heading">OUR PORTFOLIO</h1>
+        </div>
+
+      </header>
+
+      <article id="mainArticle">
+
+        <div id="sub_article">
+
+          <h3>Our Awes<span class="heading3">ome</span> Portfolio</h3>
+          <p>We equip high potential female learners with the coding, problem solving and life skills that will allow them to leverage technology to contribute meaningfully to South Africa’s innovation system. The program exposes young women to how technology can be used for social innovation and helps them navigate critical study decisions.</p>
+
+        </div>
+
+        <div id="Portfolio">
+
+          <div id="pic1"><img src="images/coding.jpg" alt="code" width="310" height="270"></div>
+          <div id="pic2"><img src="images/IMG_7477.jpg" alt="code" width="350" height="270"></div>
+          <div id="pic3"><img src="images/home.jpg" alt="code" width="419" height="270"></div>
+          <div id="pic4"><img src="images/help.jpg" alt="code" width="310" height="270"></div>
+
+          <div id="pic5"><img src="images/laptop.jpg" alt="code" width="310" height="270"></div>
+          <div id="pic6"><img src="images/class.jpg" alt="code" width="470" height="270"></div>
+          <div id="pic7"><img src="images/study.jpg" alt="code" width="310" height="270"></div>
+          <div id="pic8"><img src="images/bnw.jpg" alt="code" width="310" height="270"></div>
+
+          <div id="pic9"><img src="images/lap.jpg" alt="code" width="370" height="270"></div>
+          <div id="pic10"><img src="images/coding.jpg" alt="code" width="310" height="270"></div>
+          <div id="pic11"><img src="images/p.jpg" alt="code" width="419" height="270"></div>
+          <div id="pic12"><img src="images/coding.jpg" alt="code" width="310" height="270"></div>
+
+        </div>
+          <div class="LOGO_icons">
+
+            <div class="image_logo">
+              <img src="images/mobi.png" alt="pic" width="170" height="120">
+              <img src="images/tl.png" alt="pic" width="170" height="120">
+              <img src="images/mazar.png" alt="pic" width="170" height="120">
+              <img src="images/TN.png" alt="pic" width="170" height="120">
+              <img src="images/lw.png" alt="pic" width="170" height="120">
+              <img src="images/csg.png" alt="pic" width="160" height="120">
+              <br></br>
+              <img src="images/open.png" alt="pic" width="170" height="120">
+              <img src="images/auto.png" alt="pic" width="170" height="120">
+              <img src="images/dg.png" alt="pic" width="190" height="120">
+              <img src="images/am.png" alt="pic" width="200" height="100">
+              <img src="images/d.png" alt="pic" width="170" height="120">
+              <img src="images/wetech.png" alt="pic" width="170" height="130">
+
+            </div>
+
+          </div>
+
+        <footer>
+
+          <div class="flex-container">
+            <div>
+              <h4>Legal</h4>
+              <p class="paratext">Code for Cape Town is a project of Innovate South Africa, which is a registered non-profit (137806NPO) and a Public Beneficiary Organisation (930050338)</p>
+            </div>
+            <div>
+              <h4>Help & Support</h4>
+              <p><a href="#">Help centre</a></p>
+              <p><a href="#">Free simple template</a></p>
+              <p><a href="#">Refund policy</a></p>
+              <p><a href="#">Report spam</a></p>
+            </div>
+
+            <div>
+              <h4 id="heads">Company</h4>
+              <p><a href="#">About Us</a></p>
+              <p><a href="#">Contact Us</a></p>
+              <p><a href="#">Blog</a></p>
+              <p><a href="#">Testamonials</a></p>
+              <p><a href="#">Affiliate programme</a></p>
+            </div>
+            <div>
+
+              <p class="paratext">We rely on the generous contributions of like-minded people like yourself to provide girls with an engaging learning experience and valuable opportunities.</p>
+              <p><img class="icon" src="images/phn.ico" alt="phn" width="15" height="15"><p id="p4">021 685 0991</p>
+              <p><img class="icon" src="images/letter.jpg" alt="phn" width="15" height="15"><p id="p3">info@code4ct.com</p>
+              <img class="icon" src="images/location.png" alt="phn" width="15" height="15"><p id="p2">403 Old Castle Brewery</p>
+
+            </div>
+          </div>
+
+          <div class="flex-box">
+
+            <div><p id="die">copyright © 2017 PRIVACY POLICY</p></div>
+            <div id="f">Follow us:</div>
+            <div id="pics">
+              <img class="pictures" src="images/fb.png" alt="pic" width="23" height="20">
+              <img class="pictures" src="images/tw.png" alt="pic" width="23" height="20">
+              <img class="pictures" src="images/pinterest.png" alt="pic" width="23" height="20">
+              <img class="pictures" src="images/g+.png" alt="pic" width="23" height="20">
+              <img class="pictures"src="images/Linkedin.png" alt="pic" width="23" height="20">
+              <img class="pictures" src="images/Skype-logo.png" alt="pic" width="23" height="20">
+            </div>
+
+          </div>
+
+        </footer>
+
+      </article>
+  </body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>Contact</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+    <style>
+
+    #pageHeader {
+      grid-area: header;
+      height: 350px;
+      background-color: #444;
+      background-color: #e5e3e3;
+      color: #444;
+    }
+
+    #PageHeader1 {
+      text-align: center;
+      margin-top: 30mm;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: white;
+      padding-left: 545px;
+      height: 57px;
+      font-family: 'Lato', sans-serif;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      display: block;
+      color: #444;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 11px;
+    }
+
+    li a:hover {
+      color: indianred;
+    }
+
+    body {
+      display: grid;
+      grid-template-areas:
+        "header header header"
+        "article article article"
+        "article article article"
+        "footer footer footer";
+      grid-template-rows: 60px 1fr 60px;
+      grid-template-columns: 20% 1fr 15%;
+      grid-gap: 10px;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Lato', sans-serif;
+    }
+
+    #mainArticle {
+      grid-area: article;
+      height: 300px;
+      margin-top: 0px;
+      color: #444;
+      }
+
+      h3 {
+        border-bottom: 2px solid indianred;
+        width: 160px;
+        margin-top: 80mm;
+        margin-left: 50mm;
+      }
+
+      input[type=text], select {
+        width: 200px;
+        height: 45px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        padding-left: 10px;
+        margin-left: 10px;
+      }
+
+      form {
+        margin-left: 47mm;
+      }
+
+      textarea {
+        width: 626px;
+        height: 200px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        padding-left: 10px;
+        margin-top: 15px;
+        margin-left: -90px;
+        font-family: 'Lato', sans-serif;
+      }
+
+      #input[type=submit] {
+      width: 100px;
+      background-color:#ed524d;
+      color: white;
+      padding: 14px 8px;
+      margin: 8px 0;
+      border: 2px solid #ed524d;
+      border-radius: 3px;
+      font-family: 'Lato', sans-serif;
+      margin-top: 250px;
+      margin-left: 1px;
+      float: left;
+    }
+
+    #sub_article {
+      width: 300px;
+      float: right;
+      margin-top: -85mm;
+      margin-right: 30mm;
+      font-size: 14px;
+    }
+
+    h4 {
+      border-bottom: 2px solid #ed524d;
+      width: 100px;
+      font-size: 18px;
+    }
+
+    #p {
+      margin-left: 0px;
+      width:300px;
+    }
+
+    iframe {
+      height: 400px;
+      width: 100%;
+    }
+
+    .flex-container {
+      display: flex;
+      background-color: none;
+    }
+
+    .flex-container>div {
+      background-color: none;
+      width: 350px;
+      height: 190px;
+      margin: 10px;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    h2{
+      font-size: 15px;
+    }
+
+    .paratext {
+      color: black;
+    }
+
+    a {
+      color: black;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 11px;
+    }
+
+    a:hover {
+      color: #ed524d;
+    }
+
+    .icon {
+      float: left;
+      margin-left: 25mm;
+    }
+
+    #p2 {
+      width: 200px;
+      margin-left: 10mm;
+    }
+
+    #p3 {
+      margin-right: 26mm;
+    }
+
+    #p4 {
+      margin-right: 30mm;
+    }
+
+    .flex-box {
+      display: flex;
+      background-color: #ed524d;
+    }
+
+    .flex-box>div {
+      background-color: none;
+      width: 700px;
+      height: 40px;
+      text-align: center;
+      font-size: 13px;
+      color: white;
+      margin-top: 12px;
+    }
+
+    #die {
+      margin-left: -10mm;
+      margin-top: 12px;
+    }
+
+    .pictures {
+      margin-top: 13px;
+      margin-left: 15px;
+    }
+
+    #f {
+      margin-left: 165mm;
+      margin-top: 25px;
+    }
+
+    </style>
+
+  </head>
+  <body>
+
+
+      <header id="pageHeader">
+
+        <ul>
+          <li><a class="active" href="#home">HOME</a></li>
+          <li><a href="#news">SERVICE</a></li>
+          <li><a href="#contact">ABOUT</a></li>
+          <li><a href="#about">CONTACT</a></li>
+        </ul>
+
+        <div id="PageHeader1">
+          <h1 id="heading">CONTACT US</h1>
+        </div>
+
+      </header>
+
+      <article id="mainArticle">
+
+        <div id="email">
+          <h3>Send Us a Message</h3>
+          <form>
+
+            <input type="text" name="firstname" placeholder="Your Name">
+            <input type="text" name="firstname" placeholder="Your Email">
+            <input type="text" name="firstname" placeholder="Phone Number">
+
+            <textarea  placeholder="Your Message"></textarea>
+
+            <input id="input" type="submit" value="Send email">
+          </form>
+        </div>
+
+        <div id="sub_article">
+
+          <h4>Contact Info</h4>
+          <p>You can support our important work in a variety of ways.</p>
+
+             <p><img src="images/phn.ico" alt="phn" width="15" height="15">021 685 0991</p>
+             <p><img src="images/letter.jpg" alt="phn" width="15" height="15">info@code4ct.com</p>
+             <p><img src="images/clock.png" alt="phn" width="15" height="15">Mon-Fri 09 00 - 12 00</p>
+             <p id="p"><img src="images/location.png" alt="phn" width="15" height="15">Innovate South Africa,403 Old Castle Brewery, 6 Beach Rd,Woodstock, Cape Town, 7915</p>
+        </div>
+
+        <div id="map">
+          <div class="parent">
+            <div class="overlay"></div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.638062445999!2d18.44652591521169!3d-33.92471368064084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc5d9854044ed9%3A0x6a0ebf49da5aabab!2sCodeSpace!5e0!3m2!1sen!2sza!4v1510584609053" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <footer>
+
+          <div class="flex-container">
+            <div>
+              <h2>Legal</h2>
+              <p class="paratext">Code for Cape Town is a project of Innovate South Africa, which is a registered non-profit (137806NPO) and a Public Beneficiary Organisation (930050338)</p>
+            </div>
+            <div>
+              <h2>Help & Support</h2>
+              <p><a href="#">Help centre</a></p>
+              <p><a href="#">Free simple template</a></p>
+              <p><a href="#">Refund policy</a></p>
+              <p><a href="#">Report spam</a></p>
+            </div>
+
+            <div>
+              <h2 id="heads">Company</h2>
+              <p><a href="#">About Us</a></p>
+              <p><a href="#">Contact Us</a></p>
+              <p><a href="#">Blog</a></p>
+              <p><a href="#">Testamonials</a></p>
+              <p><a href="#">Affiliate programme</a></p>
+            </div>
+            <div>
+
+              <p class="paratext">We rely on the generous contributions of like-minded people like yourself to provide girls with an engaging learning experience and valuable opportunities.</p>
+              <p><img class="icon" src="images/phn.ico" alt="phn" width="15" height="15"><p id="p4">021 685 0991</p>
+              <p><img class="icon" src="images/letter.jpg" alt="phn" width="15" height="15"><p id="p3">info@code4ct.com</p>
+              <img class="icon" src="images/location.png" alt="phn" width="15" height="15"><p id="p2">403 Old Castle Brewery</p>
+
+            </div>
+          </div>
+
+          <div class="flex-box">
+
+            <div><p id="die">copyright © 2017 PRIVACY POLICY</p></div>
+            <div id="f">Follow us:</div>
+            <div id="pics">
+              <img class="pictures" src="images/fb.png" alt="pic" width="23" height="20">
+              <img class="pictures" src="images/tw.png" alt="pic" width="23" height="20">
+              <img class="pictures" src="images/pinterest.png" alt="pic" width="23" height="20">
+              <img class="pictures" src="images/g+.png" alt="pic" width="23" height="20">
+              <img class="pictures"src="images/Linkedin.png" alt="pic" width="23" height="20">
+              <img class="pictures" src="images/Skype-logo.png" alt="pic" width="23" height="20">
+            </div>
+
+          </div>
+
+        </footer>
+
+      </article>
+
+  </body>
+</html>

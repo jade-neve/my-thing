@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>js</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+  <style>
+
+  *, input[type="search"] {
+	box-sizing: border-box;
+}
+
+.listing-header {
+	font-size: 14px;
+	line-height: 24px;
+	color: #4f4f4f;
+	background: #f4f4f4;
+	padding: 4px 20px;
+	width: 80%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.listing-order {
+	margin-top: 10px;
+}
+
+.form-body,
+.form {
+	display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+	-webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+	> * {
+		 -webkit-flex: 1 1 auto;
+    	-ms-flex: 1 1 auto;
+    	flex: 1 1 auto;
+	}
+	&:last-of-type {
+		padding-left: 0;
+	}
+}
+
+.legend {
+	position: absolute;
+	top: -1000px;
+	left: -1000px;
+}
+
+.fieldset {
+	border: none;
+	margin: 0;
+	padding: 0;
+	.form-group {
+		padding-left: 20px;
+
+	}
+	&--search .form-group {
+		padding: 0;
+		&:last-of-type {
+			-webkit-flex: 0 1 auto;
+			-ms-flex: 0 1 auto;
+			flex: 0 1 auto;
+		}
+	}
+}
+
+.select-wrap,
+.input,
+.button {
+	display: inline-block;
+	width: 100%;
+	border: none;
+	margin: 0;
+	padding: 0;
+	color: white;
+	background: #78ba56;
+	-webkit-transition: .2s;
+	transition: .2s;
+	.select {
+		border: none;
+		width: 100%;
+	}
+}
+
+.select-wrap {
+	.select {
+		border-radius: 0;
+		background: transparent;
+		display: inline-block;
+		width: 100%;
+		text-indent: 7px;
+	}
+}
+
+.input,
+.button,
+.select {
+	height: 40px;
+	outline: none;
+}
+
+.input,
+.button {
+	padding: 0 14px;
+}
+
+.button,
+.select {
+	cursor: pointer;
+}
+
+.button,
+.select-wrap {
+	&:hover {
+		background: darken(#78ba56, 10%);
+	}
+	&:active {
+		background: darken(#78ba56, 20%);
+	}
+}
+
+.input {
+	cursor: text;
+	background: white;
+	color: #333;
+	box-shadow: inset 0 0 0 1px #78ba56;
+	&:hover {
+		box-shadow: inset 0 0 0 1px darken(#78ba56, 10%);
+	}
+	&:focus {
+		box-shadow: inset 0 0 0 1px darken(#78ba56, 20%);
+	}
+}
+
+.no-js .product-filters,
+.no-js .fieldset--search,
+.no-js .fieldset--filters .form-group {
+	opacity: 1 !important;
+	max-height: initial;
+}
+
+.product-filters {
+	-webkit-transition: .4s;
+	transition: .4s;
+	opacity: 0;
+	max-height: 0;
+	overflow: hidden;
+	.fieldset--search,
+	.fieldset--filters .form-group {
+		-webkit-transform: translate(-5px, 0);
+		transform: translate(-5px, 0);
+		-webkit-transition: .4s;
+		transition: .4s;
+		-webkit-transition-delay: .1s;
+		transition-delay: .1s;
+	}
+	.fieldset--filters .form-group {
+		-webkit-transition-delay: .2s;
+		transition-delay: .2s;
+		&:nth-of-type(2n) {
+			-webkit-transition-delay: .3s;
+			transition-delay: .3s;
+		}
+		&:nth-of-type(3n) {
+			-webkit-transition-delay: .4s;
+			transition-delay: .4s;
+		}
+		&:nth-of-type(4n) {
+			-webkit-transition-delay: .5s;
+			transition-delay: .5s;
+		}
+	}
+	&[data-state=closed] {
+		.fieldset--search,
+		.fieldset--filters .form-group {
+			opacity: 0;
+			-webkit-transition-delay: 0s;
+			transition-delay: 0s;
+		}
+	}
+	&[data-state=open] {
+		opacity: 1;
+		max-height: 70px;
+		.fieldset--search,
+		.fieldset--filters .form-group {
+			-webkit-transform: translate(0, 0);
+			transform: translate(0, 0);
+			opacity: 1;
+		}
+	}
+}
+
+.listing-title,
+.switch {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 20px;
+}
+
+.switch {
+	padding: 3px 3px 3px 0;
+	position: relative;
+	top: -1px;
+	background: #78ba56;
+	background-clip: content-box;
+	border: 0 solid #78ba56;
+	border-top-width: 3px;
+	border-bottom-width: 3px;
+	height: 15px;
+	width: 22px;
+	outline: none;
+}
+  </style>
+</head>
+<body class="no-js">
+	<header class="listing-header ecomproductslist__listing-header">
+		<h2 class="listing-title ecomproductslist__listing-title">Products</h2>
+
+		<div class="product-filters ecomproductslist__product-filters">
+			<form action="/store" class="form ecomproductslist__form js-productlist-display-form" method="get">
+				<fieldset class="fieldset fieldset--search ecomproductslist__fieldset--search">
+					<legend class="legend ecomproductslist__legend">Search Products</legend>
+
+					<div class="form-body ecomproductslist__form-body">
+						<div class="form-group ecomproductslist__form-group">
+							<label class="label label--search ecomproductslist__label" for="page-zones__main-widgets__ecomproductslistWidget__ecomproductslist__search">Search Products</label> <input class="input input--search ecomproductslist__input js-display-control" id="page-zones__main-widgets__ecomproductslistWidget__ecomproductslist__search" name="productlist-search" placeholder="Search term" type="search" value="">
+						</div>
+
+						<div class="form-group ecomproductslist__form-group">
+							<button class="button button--submit ecomproductslist__button" type="submit">Search</button>
+						</div>
+					</div>
+				</fieldset>
+
+				<fieldset class="fieldset fieldset--filters ecomproductslist__fieldset--filters">
+				<legend class="legend ecomproductslist__legend">Filters</legend>
+
+					<div class="form-body ecomproductslist__form-body">
+						<div class="form-group ecomproductslist__form-group">
+							<label class="label label--filter ecomproductslist__label" for="page-zones__main-widgets__ecomproductslistWidget__ecomproductslist__filter-1">
+							Order by</label>
+
+							<div class="select-wrap ecomproductslist__select-wrap">
+								<select class="select select--filter ecomproductslist__select js-display-control" id="page-zones__main-widgets__ecomproductslistWidget__ecomproductslist__filter-1" name="productlist-sort">
+									<option value="created-desc">
+										Newest
+									</option>
+
+									<option value="title-asc">
+										Title: A-Z
+									</option>
+
+									<option value="title-desc">
+										Title: Z-A
+									</option>
+
+									<option value="price-desc">
+										Price: Highest to Lowest
+									</option>
+
+									<option value="price-asc">
+										Price: Lowest to Highest
+									</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="form-group ecomproductslist__form-group">
+							<label class="label label--filter ecomproductslist__label" for="page-zones__main-widgets__ecomproductslistWidget__ecomproductslist__filter-2">
+							Categories</label>
+
+							<div class="select-wrap ecomproductslist__select-wrap">
+								<select class="select select--filter ecomproductslist__select js-display-control" id="page-zones__main-widgets__ecomproductslistWidget__ecomproductslist__filter-2" name="productlist-categories">
+									<option value="">
+										Filter by category
+									</option>
+
+									<option disabled>
+										---
+									</option>
+
+									<option value="woman">
+										woman
+									</option>
+
+									<option value="man">
+										man
+									</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="form-group ecomproductslist__form-group">
+							<label class="label label--filter ecomproductslist__label" for="page-zones__main-widgets__ecomproductslistWidget__ecomproductslist__filter-4">
+							Per Page</label>
+
+							<div class="select-wrap ecomproductslist__select-wrap">
+								<select class="select select--filter ecomproductslist__select js-display-control" id="page-zones__main-widgets__ecomproductslistWidget__ecomproductslist__filter-4" name="productlist-itemcount">
+									<option value="20">
+										Show 20
+									</option>
+
+									<option value="32">
+										Show 32
+									</option>
+
+									<option value="64">
+										Show 64
+									</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+
+		<p class="listing-order ecomproductslist__listing-order">Showing 1 – 20 of 300 products</p>
+	</header>
+
+  <script src="practice.js"></script>
+</body>
